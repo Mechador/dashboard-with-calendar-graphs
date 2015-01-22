@@ -1,0 +1,47 @@
+@import '../Import';
+
+#signin {
+    background:$yellow;
+}
+
+#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 180px;
+    margin-left: -120px;
+    margin-top: -90px;
+}
+
+#login h1 {
+    padding: 0;
+    margin: 5px 0 15px 0;
+    line-height: 100%;
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
+}
+
+#login .mt {
+    margin-top: 15px;
+}
+
+#login a {
+    display: block;
+    float: right;
+    margin-top: 15px;
+    padding: 0 20px;
+    line-height: 35px;
+    background: #fff;
+    font-size: 15px;
+    color: $textOne;
+    text-align: center;
+    @include borderRadius(30px);
+    @include transition(all .3s);
+}
+
+#login a:hover {
+    background: $darkYellow;
+    color: $textTwo;
+}

@@ -1,0 +1,68 @@
+@import '../Import';
+
+#events body {
+	height: 50px;
+}
+#events #menu_side {
+	width: 230px;
+	background: $cream;
+}
+
+//search ico
+#events #sub_menu span {
+	position: absolute;
+	margin-left: 10px;
+	line-height: 59px;
+	font-family: "liga";
+	fonts-size: 12px;
+}
+//search input setting
+#events #sub_menu input {
+	width: 100%;
+	margin: 0;
+	padding: 0 10px 0 40px;
+	line-height: 59px;
+	border:none;
+	border-bottom: 1px solid $lightGray;
+	border-right: 1px solid $lightGray;
+	background: transparent;
+	outline: none;
+	color: $textOne;
+	@include boxSizing();
+}
+#events #sub_menu a {
+	display: block;
+	width: 100%;
+	padding: 20px;
+	color: $textOne;
+	font-size: 14px;
+	line-height: 150%;
+	border-bottom: 1px solid $lightGray;
+	@include boxSizing();
+	@include transition(all .3s);
+}
+#events #sub_menu a:hover {
+	background: $brown;
+	color: $textTwo;
+}
+#events #sub_menu a strong {
+	display: block;
+	clear: both;
+}
+.fc-header {
+	line-height: 60px;
+	background-color: $cream;
+	border-collapse: collapse;
+}
+.fc-header * {
+	margin: 0;
+	padding: 0;
+}
+
+
+@media screen and (max-width:900px){
+	#events #sub_menu span {
+		margin-top: 50px;
+	}
+}
+

@@ -1,0 +1,99 @@
+@import '../Import';
+
+body #header_open {
+    display: none;
+    background: $brown;
+    text-align: center;
+}
+
+#header_open span {
+    font-family: "liga";
+    font-size: 30px;
+    float: left;
+}
+    
+#header {
+    float: left;
+    width: 100%;
+    background: $brown;
+}
+
+#header a, #header_open {
+    display: inline-block;
+    float: left;
+    padding: 0 15px;
+    line-height: 50px;
+    font-size: 18px;
+    color: $textTwo;
+    @include transition(all .3s);
+}
+
+#header a:first-child {
+    padding-left: 20px;
+}
+
+#header a:last-child {
+    float: right;
+    padding-right: 20px;
+}
+
+#header span {
+    font-family: "liga";
+    padding-right: 7px;
+}
+
+#header a:hover, body #header_open:hover {
+    background: $yellow;
+    color: $textOne;
+}
+
+#header em {
+    display: inline-block;
+    position: absolute;
+    line-height: 12px;
+    padding: 0 3px;
+    margin: 12px 0 0 -12px;
+    background: $red;
+    color: $textTwo;
+    text-align: center;
+    font-style: normal;
+    font-size: 9px;
+    font-weight: bold;
+    @include borderRadius(2px);
+    @include boxShadow(1px 1px 2px rgba(0,0,0,.7));
+}
+
+@media screen and (max-width: 590px) {
+    
+    body #header_open {
+        display: block;
+    }
+    
+    #header {
+        display: none;
+    }
+//    class for js open/close menu
+    #header.open {
+        display: block;
+    }
+    
+    #header a, #header_open {
+        width: 100%;
+        clear: both;
+        border-bottom: 1px solid $darkBrown;
+        @include boxSizing();
+    }
+    
+    #header a:last-child,#header a:first-child  {
+        float: left;
+        padding: 0 15px;
+    }
+    
+//    align glyph icons distance
+    #header span {
+        display: inline-block;
+        width: 20px;
+        text-align: center;
+        
+    }
+}   
